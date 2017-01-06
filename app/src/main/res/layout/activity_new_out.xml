@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:mask="http://schemas.android.com/res/br.inbonhas.friapp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_new_out"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -25,11 +27,13 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <br.com.sapereaude.maskedEditText.MaskedEditText
+        <com.github.pinball83.maskededittext.MaskedEditText
             android:id="@+id/date"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Data"/>
+            android:inputType="number"
+            app:mask="**/**/****"
+            app:notMaskedSymbol="*" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout

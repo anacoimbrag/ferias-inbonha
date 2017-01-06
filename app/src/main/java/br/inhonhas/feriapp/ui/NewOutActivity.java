@@ -1,24 +1,19 @@
 package br.inhonhas.feriapp.ui;
 
-import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.github.pinball83.maskededittext.MaskedEditText;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.List;
 import java.util.Locale;
 
-import br.com.sapereaude.maskedEditText.MaskedEditText;
 import br.inhonhas.feriapp.Event;
 import br.inhonhas.feriapp.R;
 import br.inhonhas.feriapp.service.Service;
@@ -41,8 +36,6 @@ public class NewOutActivity extends AppCompatActivity {
         nameTextView = (TextView) findViewById(R.id.name);
         dateTextView = (MaskedEditText) findViewById(R.id.date);
         addressTextView = (TextView) findViewById(R.id.address);
-
-        dateTextView.setMask("##/##/####");
 
         Button button = (Button) findViewById(R.id.add_event);
         button.setOnClickListener(new View.OnClickListener() {
