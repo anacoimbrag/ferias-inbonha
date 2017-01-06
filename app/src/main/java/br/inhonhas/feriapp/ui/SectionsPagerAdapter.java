@@ -1,4 +1,4 @@
-package br.inhonhas.feriapp;
+package br.inhonhas.feriapp.ui;
 
 /**
  * Created by anacoimbra on 05/01/17.
@@ -28,7 +28,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 fragment = MapFragment.newInstance(position + 1);
                 break;
             case 1:
-                fragment = ListFragment.newInstance("","");
+                fragment = ListFragment.newInstance();
                 break;
         }
 

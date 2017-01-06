@@ -1,4 +1,4 @@
-package br.inhonhas.feriapp;
+package br.inhonhas.feriapp.ui;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import br.inhonhas.feriapp.Inhbonhapp;
+import br.inhonhas.feriapp.R;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -32,7 +35,9 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(SplashActivity.this, LoginActivity.class);
+                Intent i;
+                if(Inhbonhapp.isLogged()) i = new Intent(SplashActivity.this, MainActivity.class);
+                else i = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(i);
 
                 finish();

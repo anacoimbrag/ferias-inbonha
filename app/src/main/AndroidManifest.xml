@@ -11,6 +11,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name=".Inhbonhapp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <meta-data
@@ -21,13 +22,14 @@
             android:value="AIzaSyDG9mOiuooDoTJ4czqM5XuCE0ceJ8qTWjw" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ui.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".SplashActivity"
+        <activity
+            android:name=".ui.SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,6 +37,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.NewOutActivity" />
+        <activity android:name=".ui.SignUpActivity"></activity>
     </application>
 
 </manifest>
